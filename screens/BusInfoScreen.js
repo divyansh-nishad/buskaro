@@ -132,7 +132,9 @@ const BusInfoScreen = () => {
                     Fare:
                 </Text>
                 <View style={styles.infoTextValue}>
-                    <FontAwesome5 style={styles.rupee} name="rupee-sign" size={18} color="#fff" />
+                    <View style={styles.rupeeIcon}>
+                        <FontAwesome5 style={styles.rupee} name="rupee-sign" size={18} color="#fff" />
+                    </View>
                     <Text style={styles.infoTextPrice}>
                         100
                     </Text>
@@ -324,6 +326,11 @@ const styles = StyleSheet.create({
         height: '100%',
         borderRadius: 30,
     },
+    infoText: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#94A3B8',
+    },
     infoTextBox: {
         // backgroundColor: '#EAEDF1',
         paddingHorizontal: 14,
@@ -331,17 +338,25 @@ const styles = StyleSheet.create({
         // width: '40%',
         marginVertical: 10,
         borderRadius: 50,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
     },
-    infoTextValue: {},
-    infoTextPrice: {
-        fontSize: 14,
-        fontWeight: 'bold',
-        color: '#39C7A5',
+    infoTextValue: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    rupeeIcon: {
+        paddingHorizontal: 9,
+        paddingVertical: 5,
+        backgroundColor: '#39c7a5',
+        borderRadius: 50,
     },
     infoTextPrice: {
-        fontSize: 14,
+        marginLeft: 4,
+        fontSize: 24,
         fontWeight: 'bold',
-        color: '#64748B',
+        color: '#39c7a5',
     },
     boardingBtn: {
         backgroundColor: '#3B82F6',
