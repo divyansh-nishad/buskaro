@@ -9,14 +9,29 @@ const Onboarding = ({ navigation }) => {
                 <Image source={require('../images/BUS.png')} style={{ height: 400, width: 400, alignSelf: 'center', padding: 30 }} />
                 <View style={{ padding: 30, justifyContent: 'center', alignItems: 'center', }}>
 
-                    <Text style={{ fontSize: 30, color: 'black', fontWeight: '900' }}>Bus Tracking</Text>
+                    <Text style={{
+                        fontSize: 34,
+                        color: 'black',
+                        fontWeight: 'bold'
+                    }}>
+                        Bus Tracking
+                    </Text>
 
-                    <Text style={{ marginTop: 10, marginLeft: 15, fontSize: 15, color: 'black', fontWeight: '400' }}>Buskaro helps you to track the location of your bus, which saves your time</Text>
+                    <Text style={{
+                        marginTop: 10,
+                        fontSize: 24,
+                        color: '#94A3B8',
+                        fontWeight: '400',
+                        textAlign: 'center',
+                    }}
+                    >
+                        BusKaro helps you to track the location of your bus, which saves your time.
+                    </Text>
                 </View>
 
-                <TouchableOpacity style={{ backgroundColor: '#B9E0FF', justifyContent: 'center', alignItems: 'center', borderRadius: 15, marginTop: 10 }}>
+                {/* <TouchableOpacity style={{ backgroundColor: '#B9E0FF', justifyContent: 'center', alignItems: 'center', borderRadius: 15, marginTop: 10 }}>
                     <Text style={{ padding: 15, width: 250, textAlign: 'center', color: 'black', fontWeight: '700', fontSize: 20 }}>Skip</Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
 
             </View>
 
@@ -43,8 +58,11 @@ const Onboarding = ({ navigation }) => {
                     <Text style={{ marginTop: 20, marginLeft: 15, fontSize: 15, color: 'black', fontWeight: '400' }}>In trouble ?? .. use our 'shake to report' feature to make calls  </Text>
                 </View>
 
-                <TouchableOpacity style={{ backgroundColor: '#B9E0FF', justifyContent: 'center', alignItems: 'center', borderRadius: 15, marginTop: 10 }} onPress={() => { navigation.navigate('Login') }}>
-                    <Text style={{ padding: 15, width: 250, textAlign: 'center', color: 'black', fontWeight: '700', fontSize: 20 }}>Skip</Text>
+                <TouchableOpacity
+                    style={{ backgroundColor: '#3B82F6', justifyContent: 'center', alignItems: 'center', borderRadius: 50, marginTop: 10 }}
+                    onPress={() => { navigation.navigate('Login') }}
+                >
+                    <Text style={{ padding: 15, width: 250, textAlign: 'center', color: '#fff', fontWeight: 'bold', fontSize: 24 }}>Skip</Text>
                 </TouchableOpacity>
 
             </View>

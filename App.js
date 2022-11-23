@@ -23,8 +23,6 @@ export default function App() {
         <Stack.Screen name="Onboarding" component={Onboarding} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Register" component={Register} />
-
-
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="BusList" component={BusListScreen} />
         <Stack.Screen name="BusBoarding" component={BusBoardingScreen} />
