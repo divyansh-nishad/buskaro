@@ -64,16 +64,24 @@ const HomeScreen = () => {
     return (
         <View style={styles.container}>
             <View style={styles.navbar}>
-                <View style={styles.userInfo}>
-                    <Image source={require('../assets/icon.png')}
+                <TouchableOpacity style={styles.userInfo}>
+                    <Image source={require('../assets/images/user.jpg')}
                         style={styles.userPhoto} />
                     <Text style={styles.userName}>
                         @username
                     </Text>
-                </View>
-                <TouchableOpacity style={styles.settingsBtn}>
-                    <AntDesign name="setting" size={28} color="#2d179b" />
                 </TouchableOpacity>
+                <TouchableOpacity style={styles.settings}>
+                    <TouchableOpacity style={styles.settingsBtn}>
+                        <AntDesign name="setting" size={28} color="#0EA5E9" />
+                    </TouchableOpacity>
+                    <Text style={styles.settingsText}>Settings</Text>
+                </TouchableOpacity>
+            </View>
+            <View style={styles.heading}>
+                <Text style={styles.header}>
+                    Search for Buses Nearby!
+                </Text>
             </View>
             <View style={styles.mapBox}>
                 {/* <GooglePlacesAutocomplete
@@ -130,12 +138,13 @@ const HomeScreen = () => {
             <View style={styles.destinationContainer}>
                 <View style={styles.destinationBox}>
                     <View style={styles.destinationIcon}>
-                        <Ionicons name="ios-location-outline" size={28} color="#2d179b" />
+                        <Ionicons name="ios-location-outline" size={32} color="#94A3B8" />
                     </View>
                     <View style={styles.inputBox}>
                         <TextInput
                             style={styles.input}
                             placeholder="Enter your destination"
+                            placeholderTextColor={'#94A3B8'}
                             onChangeText={text => setDestinationName(text)}
                         />
                     </View>
@@ -161,6 +170,15 @@ const styles = StyleSheet.create({
         width: '100%',
         paddingHorizontal: 20,
         paddingVertical: 30,
+        backgroundColor: '#fff'
+    },
+    heading: {
+        // marginVertical: 10,
+    },
+    header: {
+        fontSize: 30,
+        fontWeight: 'bold',
+        // color: '#2d179b',
     },
     navbar: {
         flexDirection: 'row',
@@ -174,18 +192,36 @@ const styles = StyleSheet.create({
     userPhoto: {
         height: 50,
         width: 50,
+        borderRadius: 50,
     },
     userName: {
         marginLeft: 10,
         fontSize: 20,
+        fontWeight: 'bold',
+    },
+    settings: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        // borderWidth: 2,
+        // borderColor: '#39397c',
+        borderRadius: 50,
+        padding: 5,
+        backgroundColor: '#eaf8ff',
     },
     settingsBtn: {
-        padding: 12,
-        backgroundColor: '#e1dbff',
-        borderRadius: 10,
+        padding: 8,
+        // backgroundColor: '#2F293F',
+        borderRadius: 50,
+    },
+    settingsText: {
+        marginLeft: 5,
+        marginRight: 10,
+        fontSize: 18,
+        color: '#2596D0',
+        fontWeight: 'bold',
     },
     mapBox: {
-        height: '80%',
+        height: '70%',
         width: '100%',
         // marginTop: 20,
         // marginBottom: 20,
@@ -200,15 +236,16 @@ const styles = StyleSheet.create({
     destinationBox: {
         flexDirection: 'row',
         alignItems: 'center',
-        borderColor: '#dedede',
+        borderColor: '#dee3ea',
         borderWidth: 1,
-        borderRadius: 10,
+        borderRadius: 50,
     },
     destinationIcon: {
-        backgroundColor: '#e1dbff',
+        // backgroundColor: '#000',
         padding: 12,
-        borderTopLeftRadius: 10,
-        borderBottomLeftRadius: 10,
+        borderTopLeftRadius: 50,
+        borderBottomLeftRadius: 50,
+        // borderRadius: 50,
     },
     inputBox: {
         paddingLeft: 10,
@@ -217,15 +254,16 @@ const styles = StyleSheet.create({
         fontSize: 20,
     },
     searchBtn: {
-        backgroundColor: '#2d179b',
+        backgroundColor: '#3B82F6',
         padding: 12,
-        borderRadius: 10,
+        borderRadius: 50,
         marginTop: 20,
     },
     searchBtnText: {
         color: '#fff',
-        fontSize: 20,
+        fontSize: 24,
         textAlign: 'center',
+        fontWeight: 'bold',
     },
 })
 
