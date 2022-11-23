@@ -12,9 +12,23 @@ import JourneyInfo from './screens/JourneyInfo';
 import Onboarding from './screens/Onboarding';
 import Login from './screens/Login';
 import Register from './screens/Register';
+import RNShake from 'react-native-shake';
+import call from 'react-native-phone-call'
+import { useEffect } from 'react';
+
 const Stack = createNativeStackNavigator()
 
 export default function App() {
+  useEffect(() => {
+    RNShake.addListener(() => {
+      const args = {
+        number: '112',
+        prompt: false,
+        skipCanOpen: true,
+      }
+      call(args).catch(console.error)
+    })
+  }, [])
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{
