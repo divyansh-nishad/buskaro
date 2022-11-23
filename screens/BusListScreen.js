@@ -50,7 +50,7 @@ const BusListScreen = ({ lat, lon, dest }) => {
                     <View style={styles.busItemTop}>
                         <View style={styles.itemTopLeft}>
                             <Text style={styles.busNumber}>UP 8900</Text>
-                            <Text style={styles.busName}>Delhi Roadways</Text>
+                            <Text style={styles.busName}>Delhi Bus Co.</Text>
                         </View>
                         <View style={styles.itemTopRight}>
                             <FontAwesome5 name="bus-alt" size={48} color="#3B82F6" />
@@ -64,7 +64,7 @@ const BusListScreen = ({ lat, lon, dest }) => {
                             </Text>
                             <MaterialIcons name="compare-arrows" size={24} color="#3B82F6" style={styles.routeIcon} />
                             <Text style={styles.routeDest}>
-                                Delhi
+                                Shastri Nagar
                             </Text>
                         </View>
                         <View style={styles.minAway}>
@@ -77,13 +77,13 @@ const BusListScreen = ({ lat, lon, dest }) => {
                             <View style={styles.itemBottomLeftIcon}>
                                 <FontAwesome5 style={styles.rupee} name="rupee-sign" size={18} color="#fff" />
                             </View>
-                            <Text style={styles.busFare}>100</Text>
+                            <Text style={styles.busFare}>20</Text>
                         </View>
                         <View style={styles.itemBottomRight}>
                             <View style={styles.itemBottomRightIcon}>
                                 <FontAwesome style={styles.crowd} name="group" size={18} color="#fff" />
                             </View>
-                            <Text style={styles.seatsOccu}>56%</Text>
+                            <Text style={styles.seatsOccu}>28%</Text>
                             <Text style={styles.seatsOccuText}>
                                 vacant
                             </Text>
@@ -96,7 +96,7 @@ const BusListScreen = ({ lat, lon, dest }) => {
                 >
                     <View style={styles.busItemTop}>
                         <View style={styles.itemTopLeft}>
-                            <Text style={styles.busNumber}>UP 8900</Text>
+                            <Text style={styles.busNumber}>DE 8304</Text>
                             <Text style={styles.busName}>Delhi Roadways</Text>
                         </View>
                         <View style={styles.itemTopRight}>
@@ -392,6 +392,7 @@ const styles = StyleSheet.create({
     itemMiddle: {
         flexDirection: 'row',
         alignItems: 'center',
+        marginVertical: 20,
         // justifyContent: 'center',
     },
     route: {
