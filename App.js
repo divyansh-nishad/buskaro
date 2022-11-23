@@ -10,6 +10,8 @@ import PaymentScreen from './screens/PaymentScreen';
 import BusJourneyScreen from './screens/BusJourneyScreen';
 import JourneyInfo from './screens/JourneyInfo';
 import Onboarding from './screens/Onboarding';
+import Login from './screens/Login';
+import Register from './screens/Register';
 const Stack = createNativeStackNavigator()
 
 export default function App() {
@@ -18,7 +20,11 @@ export default function App() {
       <Stack.Navigator screenOptions={{
         headerShown: false
       }}>
-        {/* <Stack.Screen name="Onboarding" component={Onboarding} /> */}
+        <Stack.Screen name="Onboarding" component={Onboarding} />
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Register" component={Register} />
+
+
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="BusList" component={BusListScreen} />
         <Stack.Screen name="BusBoarding" component={BusBoardingScreen} />
