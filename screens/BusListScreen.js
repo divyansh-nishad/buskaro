@@ -3,6 +3,12 @@ import React, { Component, useEffect, useLayoutEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
+// import { MaterialCommunityIcons } from '@expo/vector-icons';
+// import { Ionicons } from '@expo/vector-icons';
 
 const BusListScreen = ({ lat, lon, dest }) => {
     const nav = useNavigation()
@@ -37,19 +43,234 @@ const BusListScreen = ({ lat, lon, dest }) => {
                     onPress={() => nav.navigate('BusBoarding')}
                 >
                     <View style={styles.busItemTop}>
-                        <Text style={styles.busName}>Bus 1</Text>
-                        <Text style={styles.busNumber}>UP 8900</Text>
+                        <View style={styles.itemTopLeft}>
+                            <Text style={styles.busNumber}>UP 8900</Text>
+                            <Text style={styles.busName}>Delhi Roadways</Text>
+                        </View>
+                        <View style={styles.itemTopRight}>
+                            <FontAwesome5 name="bus-alt" size={48} color="#2596D0" />
+                        </View>
+                    </View>
+                    <View style={styles.itemMiddle}>
                         <View style={styles.route}>
-                            <Text style={styles.routeSource}>Kathmandu</Text>
-                            <MaterialIcons name="compare-arrows" size={28} color="#2d179b" />
-                            <Text style={styles.routeDest}>Pokhara</Text>
+                            <MaterialCommunityIcons name="map-marker-path" size={24} color="#2596D0" style={styles.pathIcon} />
+                            <Text style={styles.routeSource}>
+                                Rohini
+                            </Text>
+                            <MaterialIcons name="compare-arrows" size={24} color="#2596D0" style={styles.routeIcon} />
+                            <Text style={styles.routeDest}>
+                                Delhi
+                            </Text>
+                        </View>
+                        <View style={styles.minAway}>
+                            <Entypo name="back-in-time" size={24} color="#2596D0" />
+                            <Text style={styles.minAwayText}>3 min away</Text>
                         </View>
                     </View>
                     <View style={styles.busItemBottom}>
-                        <View style={styles.crowdBox}>
-                            <Text style={styles.crowd}>56%</Text>
+                        <View style={styles.itemBottomLeft}>
+                            <View style={styles.itemBottomLeftIcon}>
+                                <FontAwesome5 style={styles.rupee} name="rupee-sign" size={18} color="#fff" />
+                            </View>
+                            <Text style={styles.busFare}>100</Text>
                         </View>
-                        <Text style={styles.price}>Rs. 500</Text>
+                        <View style={styles.itemBottomRight}>
+                            <View style={styles.itemBottomRightIcon}>
+                                <FontAwesome style={styles.crowd} name="group" size={18} color="#fff" />
+                            </View>
+                            <Text style={styles.seatsOccu}>56%</Text>
+                            <Text style={styles.seatsOccuText}>
+                                vacant
+                            </Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.busItem}
+                    onPress={() => nav.navigate('BusBoarding')}
+                >
+                    <View style={styles.busItemTop}>
+                        <View style={styles.itemTopLeft}>
+                            <Text style={styles.busNumber}>UP 8900</Text>
+                            <Text style={styles.busName}>Delhi Roadways</Text>
+                        </View>
+                        <View style={styles.itemTopRight}>
+                            <FontAwesome5 name="bus-alt" size={48} color="#2596D0" />
+                        </View>
+                    </View>
+                    <View style={styles.itemMiddle}>
+                        <View style={styles.route}>
+                            <MaterialCommunityIcons name="map-marker-path" size={24} color="#2596D0" style={styles.pathIcon} />
+                            <Text style={styles.routeSource}>
+                                Rohini
+                            </Text>
+                            <MaterialIcons name="compare-arrows" size={24} color="#2596D0" style={styles.routeIcon} />
+                            <Text style={styles.routeDest}>
+                                Delhi
+                            </Text>
+                        </View>
+                        <View style={styles.minAway}>
+                            <Entypo name="back-in-time" size={24} color="#2596D0" />
+                            <Text style={styles.minAwayText}>3 min away</Text>
+                        </View>
+                    </View>
+                    <View style={styles.busItemBottom}>
+                        <View style={styles.itemBottomLeft}>
+                            <View style={styles.itemBottomLeftIcon}>
+                                <FontAwesome5 style={styles.rupee} name="rupee-sign" size={18} color="#fff" />
+                            </View>
+                            <Text style={styles.busFare}>100</Text>
+                        </View>
+                        <View style={styles.itemBottomRight}>
+                            <View style={styles.itemBottomRightIcon}>
+                                <FontAwesome style={styles.crowd} name="group" size={18} color="#fff" />
+                            </View>
+                            <Text style={styles.seatsOccu}>56%</Text>
+                            <Text style={styles.seatsOccuText}>
+                                vacant
+                            </Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.busItem}
+                    onPress={() => nav.navigate('BusBoarding')}
+                >
+                    <View style={styles.busItemTop}>
+                        <View style={styles.itemTopLeft}>
+                            <Text style={styles.busNumber}>UP 8900</Text>
+                            <Text style={styles.busName}>Delhi Roadways</Text>
+                        </View>
+                        <View style={styles.itemTopRight}>
+                            <FontAwesome5 name="bus-alt" size={48} color="#2596D0" />
+                        </View>
+                    </View>
+                    <View style={styles.itemMiddle}>
+                        <View style={styles.route}>
+                            <MaterialCommunityIcons name="map-marker-path" size={24} color="#2596D0" style={styles.pathIcon} />
+                            <Text style={styles.routeSource}>
+                                Rohini
+                            </Text>
+                            <MaterialIcons name="compare-arrows" size={24} color="#2596D0" style={styles.routeIcon} />
+                            <Text style={styles.routeDest}>
+                                Delhi
+                            </Text>
+                        </View>
+                        <View style={styles.minAway}>
+                            <Entypo name="back-in-time" size={24} color="#2596D0" />
+                            <Text style={styles.minAwayText}>3 min away</Text>
+                        </View>
+                    </View>
+                    <View style={styles.busItemBottom}>
+                        <View style={styles.itemBottomLeft}>
+                            <View style={styles.itemBottomLeftIcon}>
+                                <FontAwesome5 style={styles.rupee} name="rupee-sign" size={18} color="#fff" />
+                            </View>
+                            <Text style={styles.busFare}>100</Text>
+                        </View>
+                        <View style={styles.itemBottomRight}>
+                            <View style={styles.itemBottomRightIcon}>
+                                <FontAwesome style={styles.crowd} name="group" size={18} color="#fff" />
+                            </View>
+                            <Text style={styles.seatsOccu}>56%</Text>
+                            <Text style={styles.seatsOccuText}>
+                                vacant
+                            </Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.busItem}
+                    onPress={() => nav.navigate('BusBoarding')}
+                >
+                    <View style={styles.busItemTop}>
+                        <View style={styles.itemTopLeft}>
+                            <Text style={styles.busNumber}>UP 8900</Text>
+                            <Text style={styles.busName}>Delhi Roadways</Text>
+                        </View>
+                        <View style={styles.itemTopRight}>
+                            <FontAwesome5 name="bus-alt" size={48} color="#2596D0" />
+                        </View>
+                    </View>
+                    <View style={styles.itemMiddle}>
+                        <View style={styles.route}>
+                            <MaterialCommunityIcons name="map-marker-path" size={24} color="#2596D0" style={styles.pathIcon} />
+                            <Text style={styles.routeSource}>
+                                Rohini
+                            </Text>
+                            <MaterialIcons name="compare-arrows" size={24} color="#2596D0" style={styles.routeIcon} />
+                            <Text style={styles.routeDest}>
+                                Delhi
+                            </Text>
+                        </View>
+                        <View style={styles.minAway}>
+                            <Entypo name="back-in-time" size={24} color="#2596D0" />
+                            <Text style={styles.minAwayText}>3 min away</Text>
+                        </View>
+                    </View>
+                    <View style={styles.busItemBottom}>
+                        <View style={styles.itemBottomLeft}>
+                            <View style={styles.itemBottomLeftIcon}>
+                                <FontAwesome5 style={styles.rupee} name="rupee-sign" size={18} color="#fff" />
+                            </View>
+                            <Text style={styles.busFare}>100</Text>
+                        </View>
+                        <View style={styles.itemBottomRight}>
+                            <View style={styles.itemBottomRightIcon}>
+                                <FontAwesome style={styles.crowd} name="group" size={18} color="#fff" />
+                            </View>
+                            <Text style={styles.seatsOccu}>56%</Text>
+                            <Text style={styles.seatsOccuText}>
+                                vacant
+                            </Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.busItem}
+                    onPress={() => nav.navigate('BusBoarding')}
+                >
+                    <View style={styles.busItemTop}>
+                        <View style={styles.itemTopLeft}>
+                            <Text style={styles.busNumber}>UP 8900</Text>
+                            <Text style={styles.busName}>Delhi Roadways</Text>
+                        </View>
+                        <View style={styles.itemTopRight}>
+                            <FontAwesome5 name="bus-alt" size={48} color="#2596D0" />
+                        </View>
+                    </View>
+                    <View style={styles.itemMiddle}>
+                        <View style={styles.route}>
+                            <MaterialCommunityIcons name="map-marker-path" size={24} color="#2596D0" style={styles.pathIcon} />
+                            <Text style={styles.routeSource}>
+                                Rohini
+                            </Text>
+                            <MaterialIcons name="compare-arrows" size={24} color="#2596D0" style={styles.routeIcon} />
+                            <Text style={styles.routeDest}>
+                                Delhi
+                            </Text>
+                        </View>
+                        <View style={styles.minAway}>
+                            <Entypo name="back-in-time" size={24} color="#2596D0" />
+                            <Text style={styles.minAwayText}>3 min away</Text>
+                        </View>
+                    </View>
+                    <View style={styles.busItemBottom}>
+                        <View style={styles.itemBottomLeft}>
+                            <View style={styles.itemBottomLeftIcon}>
+                                <FontAwesome5 style={styles.rupee} name="rupee-sign" size={18} color="#fff" />
+                            </View>
+                            <Text style={styles.busFare}>100</Text>
+                        </View>
+                        <View style={styles.itemBottomRight}>
+                            <View style={styles.itemBottomRightIcon}>
+                                <FontAwesome style={styles.crowd} name="group" size={18} color="#fff" />
+                            </View>
+                            <Text style={styles.seatsOccu}>56%</Text>
+                            <Text style={styles.seatsOccuText}>
+                                vacant
+                            </Text>
+                        </View>
                     </View>
                 </TouchableOpacity>
             </ScrollView>
@@ -81,51 +302,136 @@ const styles = StyleSheet.create({
         marginVertical: 20,
     },
     busItem: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        // flexDirection: 'row',
+        // justifyContent: 'space-between',
+        // alignItems: 'center',
         padding: 20,
         borderColor: '#dedede',
         borderWidth: 1,
-        borderRadius: 10,
+        borderRadius: 30,
         marginBottom: 20,
+        // flex: 1,
+    },
+    busItemTop: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    },
+    busItemBottom: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 20,
+    },
+    itemBottomLeft: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#f7f7f7',
+        paddingHorizontal: 10,
+        paddingVertical: 10,
+        borderRadius: 50,
+    },
+    itemBottomRight: {
+        marginLeft: 50,
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#f7f7f7',
+        paddingHorizontal: 10,
+        paddingVertical: 10,
+        borderRadius: 50,
+    },
+    busFare: {
+        fontSize: 24,
+        marginHorizontal: 10,
+        fontWeight: 'bold',
+        // color: '#fff',
+    },
+    seatsOccu: {
+        fontSize: 24,
+        marginLeft: 10,
+        fontWeight: 'bold',
+    },
+    seatsOccuText: {
+        fontSize: 16,
+        marginHorizontal: 8,
+        fontWeight: 'bold',
+        color: '#94A3B8',
+    },
+    itemBottomRightIcon: {
+        backgroundColor: '#2CD568',
+        padding: 10,
+        borderRadius: 50,
+    },
+    itemBottomLeftIcon: {
+        backgroundColor: '#ffd800',
+        paddingHorizontal: 14,
+        paddingVertical: 10,
+        borderRadius: 50,
+    },
+    rupee: {},
+    crowd: {},
+    itemTopLeft: {},
+    itemTopRight: {
+        padding: 20,
+        backgroundColor: '#eaf8ff',
+        borderRadius: 50,
+    },
+    itemMiddle: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        // justifyContent: 'center',
     },
     route: {
         flexDirection: 'row',
         alignItems: 'center',
         // justifyContent: 'space-between',
-        paddingHorizontal: 20,
+        paddingHorizontal: 14,
         paddingVertical: 5,
-        backgroundColor: '#e1dbff',
+        backgroundColor: '#eaf8ff',
         borderRadius: 50,
+    },
+    pathIcon: {
+        paddingRight: 10,
+    },
+    routeIcon: {
+        paddingHorizontal: 6,
+    },
+    minAway: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginLeft: 20,
+        paddingVertical: 5,
+        paddingHorizontal: 14,
+        backgroundColor: '#eaf8ff',
+        borderRadius: 50,
+    },
+    minAwayText: {
+        paddingLeft: 10,
+        fontWeight: 'bold',
+        fontSize: 16,
+        color: '#2596D0',
     },
     busName: {
-        fontSize: 24,
+        fontSize: 18,
         fontWeight: 'bold',
+        color: '#94A3B8',
     },
     busNumber: {
-        fontSize: 16,
-        marginVertical: 5,
+        fontSize: 28,
+        // marginVertical: 5,
+        fontWeight: 'bold',
     },
     routeSource: {
-        marginRight: 10,
+        // marginRight: 10,
+        fontWeight: 'bold',
+        fontSize: 16,
+        color: '#2596D0',
     },
     routeDest: {
-        marginLeft: 10,
-    },
-    crowdBox: {
-        backgroundColor: '#e1dbff',
-        borderRadius: 50,
-        padding: 10,
-        alignItems: 'center',
-    },
-    crowd: {
-        fontSize: 20,
         fontWeight: 'bold',
-        color: '#2d179b',
-    },
-    price: {
-        fontSize: 28,
+        fontSize: 16,
+        color: '#2596D0',
+        // marginLeft: 10,
     },
 })
 
