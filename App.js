@@ -18,14 +18,14 @@ export default function App() {
       <Stack.Navigator screenOptions={{
         headerShown: false
       }}>
-        <Stack.Screen name="Onboarding" component={Onboarding} />
-        {/* <Stack.Screen name="Home" component={HomeScreen} />
+        {/* <Stack.Screen name="Onboarding" component={Onboarding} /> */}
+        <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="BusList" component={BusListScreen} />
         <Stack.Screen name="BusBoarding" component={BusBoardingScreen} />
         <Stack.Screen name="BusInfo" component={BusInfoScreen} />
         <Stack.Screen name="Payment" component={PaymentScreen} />
         <Stack.Screen name="BusJourney" component={BusJourneyScreen} />
-        <Stack.Screen name="JourneyInfo" component={JourneyInfo} /> */}
+        <Stack.Screen name="JourneyInfo" component={JourneyInfo} />
       </Stack.Navigator>
     </NavigationContainer>
   );
