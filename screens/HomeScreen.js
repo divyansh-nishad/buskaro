@@ -17,7 +17,7 @@ const HomeScreen = () => {
 
     const searchDestination = () => {
         if (destinationName) {
-            nav.navigate('BusList')
+            nav.navigate('BusList', { latitude, longitude, destinationName })
             setDestinationName('')
         }
         else {
@@ -26,21 +26,33 @@ const HomeScreen = () => {
     }
 
     useEffect(() => {
-        (async () => {
+        // (async () => {
 
-            let { status } = await Location.requestForegroundPermissionsAsync();
+        //     let { status } = await Location.requestForegroundPermissionsAsync();
+        //     if (status !== 'granted') {
+        //         setErrorMsg('Permission to access location was denied');
+        //         return;
+        //     }
+
+        //     let location = await Location.getCurrentPositionAsync({});
+        //     setLocation(location);
+        //     setLatitude(location.coords.latitude)
+        //     setLongitude(location.coords.longitude)
+        //     // console.log(latitude)
+        //     // console.log(longitude)
+        // })();
+        const getLocation = async () => {
+            const { status } = await Location.requestForegroundPermissionsAsync();
             if (status !== 'granted') {
                 setErrorMsg('Permission to access location was denied');
                 return;
             }
-
-            let location = await Location.getCurrentPositionAsync({});
+            const location = await Location.getCurrentPositionAsync({});
             setLocation(location);
             setLatitude(location.coords.latitude)
             setLongitude(location.coords.longitude)
-            // console.log(latitude)
-            // console.log(longitude)
-        })();
+        }
+        getLocation()
     }, []);
 
     useLayoutEffect(() => {
@@ -105,14 +117,14 @@ const HomeScreen = () => {
                     }}
                 >
 
-                    <Marker
+                    {/* <Marker
                         coordinate={{
                             latitude: latitude,
                             longitude: longitude,
                         }}
                         title="You are here!"
                     // pinColor="#2d179b"
-                    />
+                    /> */}
                 </MapView>
             </View>
             <View style={styles.destinationContainer}>

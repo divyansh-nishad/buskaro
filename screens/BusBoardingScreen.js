@@ -1,12 +1,37 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React, { Component, useLayoutEffect } from 'react'
+import React, { Component, useEffect, useLayoutEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
-import MapView from 'react-native-maps';
+import MapView, { Marker } from 'react-native-maps';
+import * as Location from 'expo-location';
 
-const BusBoardingScreen = () => {
+const BusBoardingScreen = (lat, lon, dest) => {
     const nav = useNavigation();
+    const [location, setLocation] = useState();
+    const [errorMsg, setErrorMsg] = useState();
+    const [latitude, setLatitude] = useState()
+    const [longitude, setLongitude] = useState()
+
+    useEffect(() => {
+        // (async () => {
+
+        //     let { status } = await Location.requestForegroundPermissionsAsync();
+        //     if (status !== 'granted') {
+        //         setErrorMsg('Permission to access location was denied');
+        //         return;
+        //     }
+
+        //     let location = await Location.getCurrentPositionAsync({});
+        //     setLocation(location);
+        //     setLatitude(location.coords.latitude)
+        //     setLongitude(location.coords.longitude)
+        //     // console.log(latitude)
+        //     // console.log(longitude)
+        // })();
+        setLatitude(lat)
+        setLongitude(lon)
+    }, []);
 
     useLayoutEffect(() => {
         nav.setOptions({
@@ -42,7 +67,27 @@ const BusBoardingScreen = () => {
                 </View>
             </View>
             <View style={styles.mapBox}>
-                <MapView style={styles.map} />
+                <MapView
+                    style={styles.map}
+                    region={{
+                        latitude: latitude,
+                        longitude: longitude,
+                        // latitude: 37.78825,
+                        // longitude: -122.4324,
+                        latitudeDelta: 0.0922,
+                        longitudeDelta: 0.0421,
+                    }}
+                >
+
+                    <Marker
+                        coordinate={{
+                            latitude: latitude,
+                            longitude: longitude,
+                        }}
+                        title="You are here!"
+                    // pinColor="#2d179b"
+                    />
+                </MapView>
             </View>
             <View style={styles.infoTextBox}>
                 <Text style={styles.infoText}>

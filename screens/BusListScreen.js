@@ -1,11 +1,19 @@
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React, { Component, useLayoutEffect } from 'react'
+import React, { Component, useEffect, useLayoutEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 
-const BusListScreen = () => {
+const BusListScreen = ({ lat, lon, dest }) => {
     const nav = useNavigation()
+    const [latitude, setLatitude] = useState()
+    const [longitude, setLongitude] = useState()
+
+    useEffect(() => {
+        setLatitude(lat)
+        setLongitude(lon)
+    }, [])
+
 
     useLayoutEffect(() => {
         nav.setOptions({
@@ -26,7 +34,7 @@ const BusListScreen = () => {
             <ScrollView style={styles.busList}>
                 <TouchableOpacity
                     style={styles.busItem}
-                    onPress={() => nav.navigate('BusBoarding')}
+                    onPress={() => nav.navigate('BusBoarding', { latitude, longitude, dest })}
                 >
                     <View style={styles.busItemLeft}>
                         <Text style={styles.busName}>Bus 1</Text>
