@@ -1,17 +1,39 @@
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { useLayoutEffect } from 'react'
-import MapView from 'react-native-maps';
+import { useEffect, useLayoutEffect, useState } from 'react'
+import MapView, { Marker } from 'react-native-maps';
 import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
+import * as Location from 'expo-location';
+import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete"
 
 const HomeScreen = () => {
     const nav = useNavigation()
+    const [location, setLocation] = useState(null);
+    const [errorMsg, setErrorMsg] = useState(null);
+    const [latitude, setLatitude] = useState()
+    const [longitude, setLongitude] = useState()
+
+    useEffect(() => {
+        (async () => {
+
+            let { status } = await Location.requestForegroundPermissionsAsync();
+            if (status !== 'granted') {
+                setErrorMsg('Permission to access location was denied');
+                return;
+            }
+
+            let location = await Location.getCurrentPositionAsync({});
+            setLocation(location);
+            setLatitude(location.coords.latitude)
+            setLongitude(location.coords.longitude)
+            console.log(latitude)
+            console.log(longitude)
+        })();
+    }, []);
 
     useLayoutEffect(() => {
         nav.setOptions({
-            // headerTitle: 'Home',
-            // headerTitleAlign: 'center',
             headerShown: false,
         })
     }, [nav])
@@ -22,14 +44,65 @@ const HomeScreen = () => {
                 <View style={styles.userInfo}>
                     <Image source={require('../assets/icon.png')}
                         style={styles.userPhoto} />
-                    <Text style={styles.userName}>@username</Text>
+                    <Text style={styles.userName}>
+                        @username
+                    </Text>
                 </View>
                 <TouchableOpacity style={styles.settingsBtn}>
                     <AntDesign name="setting" size={28} color="#2d179b" />
                 </TouchableOpacity>
             </View>
             <View style={styles.mapBox}>
-                {/* <MapView style={styles.map} /> */}
+                {/* <GooglePlacesAutocomplete
+                    placeholder="Search"
+                    fetchDetails={true}
+                    GooglePlacesSearchQuery={{
+                        rankby: "distance"
+                    }}
+                    onPress={(data, details = null) => {
+                        // 'details' is provided when fetchDetails = true
+                        console.log(data, details)
+                        setRegion({
+                            latitude: details.geometry.location.lat,
+                            longitude: details.geometry.location.lng,
+                            latitudeDelta: 0.0922,
+                            longitudeDelta: 0.0421
+                        })
+                    }}
+                    query={{
+                        key: "KEY",
+                        language: "en",
+                        // components: "country:us",
+                        // types: "establishment",
+                        // radius: 30000,
+                        location: `${latitude}, ${longitude}`
+                    }}
+                    styles={{
+                        container: { flex: 0, position: "absolute", width: "100%", zIndex: 1 },
+                        listView: { backgroundColor: "white" }
+                    }}
+                /> */}
+                <MapView
+                    style={styles.map}
+                    region={{
+                        latitude: latitude,
+                        longitude: longitude,
+                        // latitude: 37.78825,
+                        // longitude: -122.4324,
+                        latitudeDelta: 0.0922,
+                        longitudeDelta: 0.0421,
+                    }}
+                >
+
+                    <Marker
+                        coordinate={{
+                            latitude: latitude,
+                            longitude: longitude,
+                        }}
+                        title="You are here!"
+                    // pinColor="#2d179b"
+                    />
+                </MapView>
             </View>
             <View style={styles.destinationContainer}>
                 <View style={styles.destinationBox}>
