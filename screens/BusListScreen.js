@@ -37,6 +37,11 @@ const BusListScreen = ({ lat, lon, dest }) => {
                     <Ionicons name="chevron-back-outline" size={28} color="#2596D0" />
                 </TouchableOpacity>
             </View>
+            <View style={styles.heading}>
+                <Text style={styles.header}>
+                    Select your ride!
+                </Text>
+            </View>
             <ScrollView style={styles.busList}>
                 <TouchableOpacity
                     style={styles.busItem}
@@ -292,6 +297,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
+    },
+    heading: {
+        marginTop: 20,
+    },
+    header: {
+        fontSize: 30,
+        fontWeight: 'bold',
+        // color: '#2d179b',
     },
     backBtn: {
         padding: 12,

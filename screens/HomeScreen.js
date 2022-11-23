@@ -258,13 +258,13 @@ const styles = StyleSheet.create({
         width: '100%',
         // marginTop: 20,
         // marginBottom: 20,
-        borderRadius: 20,
+        borderRadius: 30,
         overflow: 'hidden',
     },
     map: {
         width: '100%',
         height: '100%',
-        borderRadius: 20,
+        borderRadius: 30,
     },
     destinationBox: {
         flexDirection: 'row',
