@@ -14,23 +14,23 @@ const BusBoardingScreen = (lat, lon, dest) => {
     const [longitude, setLongitude] = useState()
 
     useEffect(() => {
-        // (async () => {
+        (async () => {
 
-        //     let { status } = await Location.requestForegroundPermissionsAsync();
-        //     if (status !== 'granted') {
-        //         setErrorMsg('Permission to access location was denied');
-        //         return;
-        //     }
+            let { status } = await Location.requestForegroundPermissionsAsync();
+            if (status !== 'granted') {
+                setErrorMsg('Permission to access location was denied');
+                return;
+            }
 
-        //     let location = await Location.getCurrentPositionAsync({});
-        //     setLocation(location);
-        //     setLatitude(location.coords.latitude)
-        //     setLongitude(location.coords.longitude)
-        //     // console.log(latitude)
-        //     // console.log(longitude)
-        // })();
-        setLatitude(lat)
-        setLongitude(lon)
+            let location = await Location.getCurrentPositionAsync({});
+            setLocation(location);
+            setLatitude(location.coords.latitude)
+            setLongitude(location.coords.longitude)
+            // console.log(latitude)
+            // console.log(longitude)
+        })();
+        // setLatitude(lat)
+        // setLongitude(lon)
     }, []);
 
     useLayoutEffect(() => {
@@ -79,14 +79,14 @@ const BusBoardingScreen = (lat, lon, dest) => {
                     }}
                 >
 
-                    <Marker
+                    {/* <Marker
                         coordinate={{
                             latitude: latitude,
                             longitude: longitude,
                         }}
                         title="You are here!"
                     // pinColor="#2d179b"
-                    />
+                    /> */}
                 </MapView>
             </View>
             <View style={styles.infoTextBox}>

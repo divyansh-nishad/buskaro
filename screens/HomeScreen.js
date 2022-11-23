@@ -5,6 +5,7 @@ import MapView, { Marker } from 'react-native-maps';
 import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import * as Location from 'expo-location';
+import { MaterialIcons } from '@expo/vector-icons';
 // import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete"
 
 const HomeScreen = () => {
@@ -82,6 +83,19 @@ const HomeScreen = () => {
                 <Text style={styles.header}>
                     Search for Buses Nearby!
                 </Text>
+                <View style={styles.subHeaderBox}>
+                    <Text style={styles.subHeader}>
+                        Current Location:
+                    </Text>
+                    <MaterialIcons
+                        name="my-location" size={24}
+                        color="#94A3B8"
+                        style={styles.currentLocationIcon}
+                    />
+                    <Text style={styles.subHeader}>
+                        Rohini, New Delhi
+                    </Text>
+                </View>
             </View>
             <View style={styles.mapBox}>
                 {/* <GooglePlacesAutocomplete
@@ -180,6 +194,25 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         // color: '#2d179b',
     },
+    subHeaderBox: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#EAEDF1',
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+        // width: '40%',
+        marginVertical: 10,
+        borderRadius: 50,
+    },
+    subHeader: {
+        fontSize: 14,
+        fontWeight: 'bold',
+        color: '#64748B',
+        // marginLeft: 10,
+    },
+    currentLocationIcon: {
+        marginHorizontal: 4,
+    },
     navbar: {
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -221,17 +254,17 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     mapBox: {
-        height: '70%',
+        height: '68%',
         width: '100%',
         // marginTop: 20,
         // marginBottom: 20,
-        borderRadius: 10,
+        borderRadius: 20,
         overflow: 'hidden',
     },
     map: {
         width: '100%',
         height: '100%',
-        borderRadius: 10,
+        borderRadius: 20,
     },
     destinationBox: {
         flexDirection: 'row',
