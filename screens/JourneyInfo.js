@@ -14,7 +14,7 @@ const JourneyInfo = () => {
             style={styles.container}
             onPress={() => nav.navigate('Home')}
         >
-            <Text>PaymentScreen</Text>
+            <Text>Destination Reached</Text>
         </TouchableOpacity>
     )
 }

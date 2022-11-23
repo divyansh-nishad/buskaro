@@ -29,7 +29,7 @@ const HomeScreen = () => {
                 </TouchableOpacity>
             </View>
             <View style={styles.mapBox}>
-                <MapView style={styles.map} />
+                {/* <MapView style={styles.map} /> */}
             </View>
             <View style={styles.destinationContainer}>
                 <View style={styles.destinationBox}>
