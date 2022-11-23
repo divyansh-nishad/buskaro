@@ -49,7 +49,7 @@ const BusListScreen = ({ lat, lon, dest }) => {
                 >
                     <View style={styles.busItemTop}>
                         <View style={styles.itemTopLeft}>
-                            <Text style={styles.busNumber}>UP 8900</Text>
+                            <Text style={styles.busNumber}>DE 8900</Text>
                             <Text style={styles.busName}>Delhi Bus Co.</Text>
                         </View>
                         <View style={styles.itemTopRight}>
@@ -69,7 +69,7 @@ const BusListScreen = ({ lat, lon, dest }) => {
                         </View>
                         <View style={styles.minAway}>
                             <Entypo name="back-in-time" size={24} color="#3B82F6" />
-                            <Text style={styles.minAwayText}>3 min away</Text>
+                            <Text style={styles.minAwayText}>13 min away</Text>
                         </View>
                     </View>
                     <View style={styles.busItemBottom}>
@@ -77,7 +77,7 @@ const BusListScreen = ({ lat, lon, dest }) => {
                             <View style={styles.itemBottomLeftIcon}>
                                 <FontAwesome5 style={styles.rupee} name="rupee-sign" size={18} color="#fff" />
                             </View>
-                            <Text style={styles.busFare}>20</Text>
+                            <Text style={styles.busFare}>50</Text>
                         </View>
                         <View style={styles.itemBottomRight}>
                             <View style={styles.itemBottomRightIcon}>
@@ -97,7 +97,7 @@ const BusListScreen = ({ lat, lon, dest }) => {
                     <View style={styles.busItemTop}>
                         <View style={styles.itemTopLeft}>
                             <Text style={styles.busNumber}>DE 8304</Text>
-                            <Text style={styles.busName}>Delhi Roadways</Text>
+                            <Text style={styles.busName}>Delhi Bus Co.</Text>
                         </View>
                         <View style={styles.itemTopRight}>
                             <FontAwesome5 name="bus-alt" size={48} color="#3B82F6" />
@@ -111,7 +111,7 @@ const BusListScreen = ({ lat, lon, dest }) => {
                             </Text>
                             <MaterialIcons name="compare-arrows" size={24} color="#3B82F6" style={styles.routeIcon} />
                             <Text style={styles.routeDest}>
-                                Delhi
+                                Kashmere Gate
                             </Text>
                         </View>
                         <View style={styles.minAway}>
@@ -143,8 +143,8 @@ const BusListScreen = ({ lat, lon, dest }) => {
                 >
                     <View style={styles.busItemTop}>
                         <View style={styles.itemTopLeft}>
-                            <Text style={styles.busNumber}>UP 8900</Text>
-                            <Text style={styles.busName}>Delhi Roadways</Text>
+                            <Text style={styles.busNumber}>UP 8296</Text>
+                            <Text style={styles.busName}>Delhi Bus Pvt. Ltd.</Text>
                         </View>
                         <View style={styles.itemTopRight}>
                             <FontAwesome5 name="bus-alt" size={48} color="#3B82F6" />
@@ -158,12 +158,12 @@ const BusListScreen = ({ lat, lon, dest }) => {
                             </Text>
                             <MaterialIcons name="compare-arrows" size={24} color="#3B82F6" style={styles.routeIcon} />
                             <Text style={styles.routeDest}>
-                                Delhi
+                                Muradnagar
                             </Text>
                         </View>
                         <View style={styles.minAway}>
                             <Entypo name="back-in-time" size={24} color="#3B82F6" />
-                            <Text style={styles.minAwayText}>3 min away</Text>
+                            <Text style={styles.minAwayText}>30 min away</Text>
                         </View>
                     </View>
                     <View style={styles.busItemBottom}>
@@ -171,13 +171,13 @@ const BusListScreen = ({ lat, lon, dest }) => {
                             <View style={styles.itemBottomLeftIcon}>
                                 <FontAwesome5 style={styles.rupee} name="rupee-sign" size={18} color="#fff" />
                             </View>
-                            <Text style={styles.busFare}>100</Text>
+                            <Text style={styles.busFare}>120</Text>
                         </View>
                         <View style={styles.itemBottomRight}>
                             <View style={styles.itemBottomRightIcon}>
                                 <FontAwesome style={styles.crowd} name="group" size={18} color="#fff" />
                             </View>
-                            <Text style={styles.seatsOccu}>56%</Text>
+                            <Text style={styles.seatsOccu}>96%</Text>
                             <Text style={styles.seatsOccuText}>
                                 vacant
                             </Text>
@@ -190,8 +190,8 @@ const BusListScreen = ({ lat, lon, dest }) => {
                 >
                     <View style={styles.busItemTop}>
                         <View style={styles.itemTopLeft}>
-                            <Text style={styles.busNumber}>UP 8900</Text>
-                            <Text style={styles.busName}>Delhi Roadways</Text>
+                            <Text style={styles.busNumber}>UP 4269</Text>
+                            <Text style={styles.busName}>Delhi Bus Co.</Text>
                         </View>
                         <View style={styles.itemTopRight}>
                             <FontAwesome5 name="bus-alt" size={48} color="#3B82F6" />
@@ -205,12 +205,12 @@ const BusListScreen = ({ lat, lon, dest }) => {
                             </Text>
                             <MaterialIcons name="compare-arrows" size={24} color="#3B82F6" style={styles.routeIcon} />
                             <Text style={styles.routeDest}>
-                                Delhi
+                                Welcome
                             </Text>
                         </View>
                         <View style={styles.minAway}>
                             <Entypo name="back-in-time" size={24} color="#3B82F6" />
-                            <Text style={styles.minAwayText}>3 min away</Text>
+                            <Text style={styles.minAwayText}>10 min away</Text>
                         </View>
                     </View>
                     <View style={styles.busItemBottom}>
@@ -218,60 +218,13 @@ const BusListScreen = ({ lat, lon, dest }) => {
                             <View style={styles.itemBottomLeftIcon}>
                                 <FontAwesome5 style={styles.rupee} name="rupee-sign" size={18} color="#fff" />
                             </View>
-                            <Text style={styles.busFare}>100</Text>
+                            <Text style={styles.busFare}>60</Text>
                         </View>
                         <View style={styles.itemBottomRight}>
                             <View style={styles.itemBottomRightIcon}>
                                 <FontAwesome style={styles.crowd} name="group" size={18} color="#fff" />
                             </View>
-                            <Text style={styles.seatsOccu}>56%</Text>
-                            <Text style={styles.seatsOccuText}>
-                                vacant
-                            </Text>
-                        </View>
-                    </View>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.busItem}
-                    onPress={() => nav.navigate('BusBoarding')}
-                >
-                    <View style={styles.busItemTop}>
-                        <View style={styles.itemTopLeft}>
-                            <Text style={styles.busNumber}>UP 8900</Text>
-                            <Text style={styles.busName}>Delhi Roadways</Text>
-                        </View>
-                        <View style={styles.itemTopRight}>
-                            <FontAwesome5 name="bus-alt" size={48} color="#3B82F6" />
-                        </View>
-                    </View>
-                    <View style={styles.itemMiddle}>
-                        <View style={styles.route}>
-                            <MaterialCommunityIcons name="map-marker-path" size={24} color="#3B82F6" style={styles.pathIcon} />
-                            <Text style={styles.routeSource}>
-                                Rohini
-                            </Text>
-                            <MaterialIcons name="compare-arrows" size={24} color="#3B82F6" style={styles.routeIcon} />
-                            <Text style={styles.routeDest}>
-                                Delhi
-                            </Text>
-                        </View>
-                        <View style={styles.minAway}>
-                            <Entypo name="back-in-time" size={24} color="#3B82F6" />
-                            <Text style={styles.minAwayText}>3 min away</Text>
-                        </View>
-                    </View>
-                    <View style={styles.busItemBottom}>
-                        <View style={styles.itemBottomLeft}>
-                            <View style={styles.itemBottomLeftIcon}>
-                                <FontAwesome5 style={styles.rupee} name="rupee-sign" size={18} color="#fff" />
-                            </View>
-                            <Text style={styles.busFare}>100</Text>
-                        </View>
-                        <View style={styles.itemBottomRight}>
-                            <View style={styles.itemBottomRightIcon}>
-                                <FontAwesome style={styles.crowd} name="group" size={18} color="#fff" />
-                            </View>
-                            <Text style={styles.seatsOccu}>56%</Text>
+                            <Text style={styles.seatsOccu}>82%</Text>
                             <Text style={styles.seatsOccuText}>
                                 vacant
                             </Text>

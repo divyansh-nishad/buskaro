@@ -63,8 +63,8 @@ const BusInfoScreen = () => {
             >
                 <View style={styles.busItemTop}>
                     <View style={styles.itemTopLeft}>
-                        <Text style={styles.busNumber}>UP 8900</Text>
-                        <Text style={styles.busName}>Delhi Roadways</Text>
+                        <Text style={styles.busNumber}>DE 8304</Text>
+                        <Text style={styles.busName}>Delhi Bus Co.</Text>
                     </View>
                     <View style={styles.itemTopRight}>
                         <FontAwesome5 name="bus-alt" size={48} color="#3B82F6" />
@@ -78,7 +78,7 @@ const BusInfoScreen = () => {
                         </Text>
                         <MaterialIcons name="compare-arrows" size={24} color="#3B82F6" style={styles.routeIcon} />
                         <Text style={styles.routeDest}>
-                            Delhi
+                            Kashmere Gate
                         </Text>
                     </View>
                     {/* <View style={styles.minAway}>
@@ -86,7 +86,7 @@ const BusInfoScreen = () => {
                         <Text style={styles.minAwayText}>3 min away</Text>
                     </View> */}
                 </View>
-                <View style={styles.busItemBottom}>
+                {/* <View style={styles.busItemBottom}>
                     <View style={styles.itemBottomLeft}>
                         <View style={styles.itemBottomLeftIcon}>
                             <FontAwesome5 style={styles.rupee} name="rupee-sign" size={18} color="#fff" />
@@ -102,7 +102,7 @@ const BusInfoScreen = () => {
                             vacant
                         </Text>
                     </View>
-                </View>
+                </View> */}
             </TouchableOpacity>
             <View style={styles.mapBox}>
                 <MapView
@@ -314,7 +314,7 @@ const styles = StyleSheet.create({
         // marginLeft: 10,
     },
     mapBox: {
-        height: '46%',
+        height: '54%',
         width: '100%',
         // marginTop: 20,
         // marginBottom: 20,

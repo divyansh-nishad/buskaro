@@ -64,8 +64,8 @@ const BusJourneyScreen = () => {
             >
                 <View style={styles.busItemTop}>
                     <View style={styles.itemTopLeft}>
-                        <Text style={styles.busNumber}>UP 8900</Text>
-                        <Text style={styles.busName}>Delhi Roadways</Text>
+                        <Text style={styles.busNumber}>DE 8304</Text>
+                        <Text style={styles.busName}>Delhi Bus Co.</Text>
                     </View>
                     <View style={styles.itemTopRight}>
                         <FontAwesome5 name="bus-alt" size={48} color="#3b82f6" />
@@ -141,15 +141,15 @@ const BusJourneyScreen = () => {
                     <View style={styles.bottomIcon}>
                         <MaterialCommunityIcons style={styles.icon} name="map-marker-distance" size={24} color="#3B82F6" />
                     </View>
-                    <Text style={styles.bottomLeftText}>89km</Text>
+                    <Text style={styles.bottomLeftText}>2 km</Text>
                 </View>
                 <View style={styles.bottomRight}>
                     <View style={styles.bottomIcon}>
                         <MaterialCommunityIcons style={styles.icon} name="clock-time-eight" size={24} color="#3b82f6" />
                     </View>
-                    <Text style={styles.bottomRightText}>2hr 36min left to reach</Text>
+                    <Text style={styles.bottomRightText}>6 min left to reach</Text>
                     <Text style={styles.leftSubText}>
-                        Delhi
+                        Shastri Nagar
                     </Text>
                 </View>
             </TouchableOpacity>
@@ -324,7 +324,7 @@ const styles = StyleSheet.create({
         // marginLeft: 10,
     },
     mapBox: {
-        height: '58%',
+        height: '64%',
         width: '100%',
         // marginTop: 20,
         // marginBottom: 20,
