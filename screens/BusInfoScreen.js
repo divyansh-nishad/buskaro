@@ -131,9 +131,12 @@ const BusInfoScreen = () => {
                 <Text style={styles.infoText}>
                     Fare:
                 </Text>
-                <Text style={styles.infoText}>
-                    Rs. 560
-                </Text>
+                <View style={styles.infoTextValue}>
+                    <FontAwesome5 style={styles.rupee} name="rupee-sign" size={18} color="#fff" />
+                    <Text style={styles.infoTextPrice}>
+                        100
+                    </Text>
+                </View>
             </View>
             <TouchableOpacity
                 style={styles.boardingBtn}
@@ -322,14 +325,20 @@ const styles = StyleSheet.create({
         borderRadius: 30,
     },
     infoTextBox: {
-        backgroundColor: '#EAEDF1',
+        // backgroundColor: '#EAEDF1',
         paddingHorizontal: 14,
         paddingVertical: 10,
         // width: '40%',
         marginVertical: 10,
         borderRadius: 50,
     },
-    infoText: {
+    infoTextValue: {},
+    infoTextPrice: {
+        fontSize: 14,
+        fontWeight: 'bold',
+        color: '#39C7A5',
+    },
+    infoTextPrice: {
         fontSize: 14,
         fontWeight: 'bold',
         color: '#64748B',
