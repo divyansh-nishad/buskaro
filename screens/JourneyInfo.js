@@ -52,6 +52,7 @@ const JourneyInfo = () => {
                     <Text style={styles.text}>Destination Reached</Text>
                 </View>
             </View>
+            <StatusBar style="auto" />
         </TouchableOpacity>
     )
 }

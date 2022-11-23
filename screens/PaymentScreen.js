@@ -59,6 +59,7 @@ const PaymentScreen = () => {
                     <Text style={styles.text}>Payment Success</Text>
                 </View>
             </View>
+            <StatusBar style="auto" />
         </TouchableOpacity>
     )
 }

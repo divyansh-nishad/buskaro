@@ -153,6 +153,7 @@ const BusJourneyScreen = () => {
                     </Text>
                 </View>
             </TouchableOpacity>
+            <StatusBar style="auto" />
         </View>
     )
 }

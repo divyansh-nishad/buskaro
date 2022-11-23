@@ -232,6 +232,7 @@ const BusListScreen = ({ lat, lon, dest }) => {
                     </View>
                 </TouchableOpacity>
             </ScrollView>
+            <StatusBar style="auto" />
         </View>
     )
 }

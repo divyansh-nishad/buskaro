@@ -156,6 +156,7 @@ const Onboarding = ({ navigation }) => {
                 </TouchableOpacity>
 
             </View>
+            <StatusBar style="auto" />
         </Swiper>
     )
 }

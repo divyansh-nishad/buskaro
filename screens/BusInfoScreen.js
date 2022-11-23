@@ -146,6 +146,7 @@ const BusInfoScreen = () => {
             >
                 <Text style={styles.boardingBtnText}>Book Ticket</Text>
             </TouchableOpacity>
+            <StatusBar style="auto" />
         </View>
     )
 }

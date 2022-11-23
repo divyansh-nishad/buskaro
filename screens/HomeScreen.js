@@ -172,6 +172,7 @@ const HomeScreen = () => {
                     <Text style={styles.searchBtnText}>Search</Text>
                 </TouchableOpacity>
             </View>
+            <StatusBar style="auto" />
         </View>
     )
 }

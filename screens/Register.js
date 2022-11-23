@@ -46,8 +46,7 @@ const Login = ({ navigation }) => {
             <TouchableOpacity style={styles.button} onPress={pressLogin}>
                 <Text style={styles.buttonText}>Sign Up</Text>
             </TouchableOpacity>
-
-
+            <StatusBar style="auto" />
         </View>
     );
 };

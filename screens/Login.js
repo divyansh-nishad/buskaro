@@ -65,6 +65,7 @@ const Login = ({ navigation }) => {
                     </Text>
                 </TouchableOpacity>
             </View>
+            <StatusBar style="auto" />
         </View>
     );
 };

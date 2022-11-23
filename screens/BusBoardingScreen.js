@@ -141,6 +141,7 @@ const BusBoardingScreen = (lat, lon, dest) => {
             >
                 <Text style={styles.boardingBtnText}>Boarded</Text>
             </TouchableOpacity>
+            <StatusBar style="auto" />
         </View>
     )
 }
