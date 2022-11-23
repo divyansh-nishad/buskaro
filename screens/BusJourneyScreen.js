@@ -134,16 +134,26 @@ const BusJourneyScreen = () => {
                 </Text>
             </View> */}
             <TouchableOpacity
-                style={styles.boardingBtn}
+                style={styles.bottom}
                 onPress={() => nav.navigate('JourneyInfo')}
             >
                 <View style={styles.bottomLeft}>
-                    <MaterialCommunityIcons name="map-marker-distance" size={24} color="black" />
-                    <Text style={styles.boardingBtnText}>89km</Text>
+                    <View style={styles.bottomIcon}>
+                        <MaterialCommunityIcons style={styles.icon} name="map-marker-distance" size={24} color="#3B82F6" />
+                    </View>
+                    <Text style={styles.bottomLeftText}>89km</Text>
+                    <Text style={styles.leftText}>
+                        left to reach
+                    </Text>
+                    <Text style={styles.leftSubText}>
+                        Delhi
+                    </Text>
                 </View>
                 <View style={styles.bottomRight}>
-                    <Ionicons name="ios-time-outline" size={24} color="black" />
-                    <Text style={styles.boardingBtnText}>2hr 36min</Text>
+                    <View style={styles.bottomIcon}>
+                        <MaterialCommunityIcons style={styles.icon} name="clock-time-eight" size={24} color="#3b82f6" />
+                    </View>
+                    <Text style={styles.bottomRightText}>2hr 36min</Text>
                 </View>
             </TouchableOpacity>
         </View>
@@ -334,10 +344,48 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         alignItems: 'center',
     },
-    boardingBtnText: {
-        fontSize: 20,
+    bottom: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        // backgroundColor: '#f7f7f7',
+        paddingHorizontal: 40,
+        paddingVertical: 20,
+        borderRadius: 30,
+    },
+    bottomLeft: {
+        flexDirection: 'row',
+        alignItems: 'center',
+
+    },
+    bottomLeftText: {
+        fontSize: 24,
         fontWeight: 'bold',
-        color: '#2d179b',
+        color: '#94A3B8',
+        marginLeft: 10,
+    },
+    leftText: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginLeft: 6,
+    },
+    leftSubText: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginLeft: 6,
+        color: '#94A3B8',
+    },
+    bottomRightText: {},
+    bottomRight: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    bottomIcon: {
+        backgroundColor: '#eaf8ff',
+        padding: 10,
+        borderRadius: 50,
+    },
+    icon: {
     },
 })
 
