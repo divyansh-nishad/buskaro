@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Swiper from 'react-native-swiper'
-const Onboarding = () => {
+const Onboarding = ({ navigation }) => {
     return (
         <Swiper style={styles.wrapper} showsButtons={true}>
             <View style={styles.slide1}>
@@ -40,10 +40,10 @@ const Onboarding = () => {
 
                     <Text style={{ fontSize: 30, color: 'black', fontWeight: '900' }}>Emergency Calling</Text>
 
-                    <Text style={{ marginTop: 20, marginLeft: 15, fontSize: 15, color: 'black', fontWeight: '400' }}>Buskaro </Text>
+                    <Text style={{ marginTop: 20, marginLeft: 15, fontSize: 15, color: 'black', fontWeight: '400' }}>In trouble ?? .. use our 'shake to report' feature to make calls  </Text>
                 </View>
 
-                <TouchableOpacity style={{ backgroundColor: '#B9E0FF', justifyContent: 'center', alignItems: 'center', borderRadius: 15, marginTop: 10 }}>
+                <TouchableOpacity style={{ backgroundColor: '#B9E0FF', justifyContent: 'center', alignItems: 'center', borderRadius: 15, marginTop: 10 }} onPress={() => { navigation.navigate('Login') }}>
                     <Text style={{ padding: 15, width: 250, textAlign: 'center', color: 'black', fontWeight: '700', fontSize: 20 }}>Skip</Text>
                 </TouchableOpacity>
 
