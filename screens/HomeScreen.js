@@ -74,7 +74,7 @@ const HomeScreen = () => {
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.settings}>
                     <TouchableOpacity style={styles.settingsBtn}>
-                        <AntDesign name="setting" size={28} color="#0EA5E9" />
+                        <AntDesign name="setting" size={28} color="#3b82f6" />
                     </TouchableOpacity>
                     <Text style={styles.settingsText}>Settings</Text>
                 </TouchableOpacity>
@@ -88,8 +88,8 @@ const HomeScreen = () => {
                         Current Location:
                     </Text>
                     <MaterialIcons
-                        name="my-location" size={24}
-                        color="#94A3B8"
+                        name="my-location" size={18}
+                        color="#3b82f6"
                         style={styles.currentLocationIcon}
                     />
                     <Text style={styles.subHeader}>
@@ -197,7 +197,7 @@ const styles = StyleSheet.create({
     subHeaderBox: {
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: '#EAEDF1',
+        backgroundColor: '#f7f7f7',
         paddingHorizontal: 10,
         paddingVertical: 5,
         // width: '40%',
@@ -207,7 +207,7 @@ const styles = StyleSheet.create({
     subHeader: {
         fontSize: 14,
         fontWeight: 'bold',
-        color: '#64748B',
+        color: '#94A3B8',
         // marginLeft: 10,
     },
     currentLocationIcon: {
@@ -239,7 +239,7 @@ const styles = StyleSheet.create({
         // borderColor: '#39397c',
         borderRadius: 50,
         padding: 5,
-        backgroundColor: '#eaf8ff',
+        backgroundColor: '#dbe8ff',
     },
     settingsBtn: {
         padding: 8,
@@ -250,7 +250,7 @@ const styles = StyleSheet.create({
         marginLeft: 5,
         marginRight: 10,
         fontSize: 18,
-        color: '#2596D0',
+        color: '#3b82f6',
         fontWeight: 'bold',
     },
     mapBox: {

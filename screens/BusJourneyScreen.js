@@ -50,7 +50,7 @@ const BusJourneyScreen = () => {
                     style={styles.backBtn}
                     onPress={() => nav.goBack()}
                 >
-                    <Ionicons name="chevron-back-outline" size={28} color="#2596D0" />
+                    <Ionicons name="chevron-back-outline" size={28} color="#3b82f6" />
                 </TouchableOpacity>
             </View>
             <View style={styles.heading}>
@@ -68,7 +68,7 @@ const BusJourneyScreen = () => {
                         <Text style={styles.busName}>Delhi Roadways</Text>
                     </View>
                     <View style={styles.itemTopRight}>
-                        <FontAwesome5 name="bus-alt" size={48} color="#2596D0" />
+                        <FontAwesome5 name="bus-alt" size={48} color="#3b82f6" />
                     </View>
                 </View>
                 {/* <View style={styles.itemMiddle}>
@@ -142,18 +142,15 @@ const BusJourneyScreen = () => {
                         <MaterialCommunityIcons style={styles.icon} name="map-marker-distance" size={24} color="#3B82F6" />
                     </View>
                     <Text style={styles.bottomLeftText}>89km</Text>
-                    <Text style={styles.leftText}>
-                        left to reach
-                    </Text>
-                    <Text style={styles.leftSubText}>
-                        Delhi
-                    </Text>
                 </View>
                 <View style={styles.bottomRight}>
                     <View style={styles.bottomIcon}>
                         <MaterialCommunityIcons style={styles.icon} name="clock-time-eight" size={24} color="#3b82f6" />
                     </View>
-                    <Text style={styles.bottomRightText}>2hr 36min</Text>
+                    <Text style={styles.bottomRightText}>2hr 36min left to reach</Text>
+                    <Text style={styles.leftSubText}>
+                        Delhi
+                    </Text>
                 </View>
             </TouchableOpacity>
         </View>
@@ -185,7 +182,7 @@ const styles = StyleSheet.create({
     },
     backBtn: {
         padding: 12,
-        backgroundColor: '#eaf8ff',
+        backgroundColor: '#dbe8ff',
         borderRadius: 50,
     },
     busList: {
@@ -196,10 +193,12 @@ const styles = StyleSheet.create({
         // justifyContent: 'space-between',
         // alignItems: 'center',
         padding: 20,
-        borderColor: '#dedede',
-        borderWidth: 1,
+        // borderColor: '#dedede',
+        // borderWidth: 1,
         borderRadius: 30,
-        marginBottom: 20,
+        // marginBottom: 20,
+        backgroundColor: '#f7f7f7',
+        // backgroundColor: '#dbe8ff',
         // flex: 1,
     },
     busItemTop: {
@@ -262,9 +261,9 @@ const styles = StyleSheet.create({
     crowd: {},
     itemTopLeft: {},
     itemTopRight: {
-        padding: 20,
-        backgroundColor: '#eaf8ff',
-        borderRadius: 50,
+        // padding: 20,
+        // backgroundColor: '#eaf8ff',
+        // borderRadius: 50,
     },
     itemMiddle: {
         flexDirection: 'row',
@@ -310,6 +309,7 @@ const styles = StyleSheet.create({
         fontSize: 28,
         // marginVertical: 5,
         fontWeight: 'bold',
+        color: '#3b82f6',
     },
     routeSource: {
         // marginRight: 10,
@@ -348,8 +348,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        // backgroundColor: '#f7f7f7',
-        paddingHorizontal: 40,
+        backgroundColor: '#f7f7f7',
+        paddingHorizontal: 20,
         paddingVertical: 20,
         borderRadius: 30,
     },
@@ -359,31 +359,32 @@ const styles = StyleSheet.create({
 
     },
     bottomLeftText: {
-        fontSize: 24,
+        fontSize: 18,
         fontWeight: 'bold',
         color: '#94A3B8',
         marginLeft: 10,
     },
-    leftText: {
-        fontSize: 16,
-        fontWeight: 'bold',
-        marginLeft: 6,
-    },
     leftSubText: {
-        fontSize: 16,
+        fontSize: 18,
         fontWeight: 'bold',
         marginLeft: 6,
-        color: '#94A3B8',
+        color: '#3b82f6',
     },
-    bottomRightText: {},
+    bottomRightText: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#94A3B8',
+        marginLeft: 10,
+    },
     bottomRight: {
         flexDirection: 'row',
         alignItems: 'center',
+        // marginLeft: 20,
     },
     bottomIcon: {
-        backgroundColor: '#eaf8ff',
-        padding: 10,
-        borderRadius: 50,
+        // backgroundColor: '#eaf8ff',
+        // padding: 10,
+        // borderRadius: 50,
     },
     icon: {
     },
