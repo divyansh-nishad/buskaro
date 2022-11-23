@@ -1,18 +1,29 @@
-import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Alert, Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { useEffect, useLayoutEffect, useState } from 'react'
 import MapView, { Marker } from 'react-native-maps';
 import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import * as Location from 'expo-location';
-import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete"
+// import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete"
 
 const HomeScreen = () => {
     const nav = useNavigation()
-    const [location, setLocation] = useState(null);
-    const [errorMsg, setErrorMsg] = useState(null);
+    const [location, setLocation] = useState();
+    const [errorMsg, setErrorMsg] = useState();
     const [latitude, setLatitude] = useState()
     const [longitude, setLongitude] = useState()
+    const [destinationName, setDestinationName] = useState('')
+
+    const searchDestination = () => {
+        if (destinationName) {
+            nav.navigate('BusList')
+            setDestinationName('')
+        }
+        else {
+            Alert.alert("Warning", 'Please enter a destination')
+        }
+    }
 
     useEffect(() => {
         (async () => {
@@ -27,8 +38,8 @@ const HomeScreen = () => {
             setLocation(location);
             setLatitude(location.coords.latitude)
             setLongitude(location.coords.longitude)
-            console.log(latitude)
-            console.log(longitude)
+            // console.log(latitude)
+            // console.log(longitude)
         })();
     }, []);
 
@@ -61,20 +72,20 @@ const HomeScreen = () => {
                     }}
                     onPress={(data, details = null) => {
                         // 'details' is provided when fetchDetails = true
-                        console.log(data, details)
-                        setRegion({
-                            latitude: details.geometry.location.lat,
-                            longitude: details.geometry.location.lng,
-                            latitudeDelta: 0.0922,
-                            longitudeDelta: 0.0421
-                        })
+                        // console.log(data, details)
+                        // setRegion({
+                        //     latitude: details.geometry.location.lat,
+                        //     longitude: details.geometry.location.lng,
+                        //     latitudeDelta: 0.0922,
+                        //     longitudeDelta: 0.0421
+                        // })
                     }}
                     query={{
                         key: "KEY",
                         language: "en",
-                        // components: "country:us",
-                        // types: "establishment",
-                        // radius: 30000,
+                        components: "country:in",
+                        types: "establishment",
+                        radius: 30000,
                         location: `${latitude}, ${longitude}`
                     }}
                     styles={{
@@ -110,12 +121,18 @@ const HomeScreen = () => {
                         <Ionicons name="ios-location-outline" size={28} color="#2d179b" />
                     </View>
                     <View style={styles.inputBox}>
-                        <TextInput style={styles.input} placeholder="Enter your destination" />
+                        <TextInput
+                            style={styles.input}
+                            placeholder="Enter your destination"
+                            onChangeText={text => setDestinationName(text)}
+                        />
                     </View>
                 </View>
                 <TouchableOpacity
                     style={styles.searchBtn}
-                    onPress={() => nav.navigate('BusList')}
+                    onPress={() => {
+                        searchDestination()
+                    }}
                 >
                     <Text style={styles.searchBtnText}>Search</Text>
                 </TouchableOpacity>
