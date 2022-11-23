@@ -52,7 +52,7 @@ const BusBoardingScreen = (lat, lon, dest) => {
                     style={styles.backBtn}
                     onPress={() => nav.goBack()}
                 >
-                    <Ionicons name="chevron-back-outline" size={28} color="#2596D0" />
+                    <Ionicons name="chevron-back-outline" size={28} color="#3B82F6" />
                 </TouchableOpacity>
             </View>
             <View style={styles.heading}>
@@ -62,7 +62,7 @@ const BusBoardingScreen = (lat, lon, dest) => {
             </View>
             <TouchableOpacity
                 style={styles.busItem}
-                onPress={() => nav.navigate('BusBoarding')}
+            // onPress={() => nav.navigate('BusBoarding')}
             >
                 <View style={styles.busItemTop}>
                     <View style={styles.itemTopLeft}>
@@ -70,22 +70,22 @@ const BusBoardingScreen = (lat, lon, dest) => {
                         <Text style={styles.busName}>Delhi Roadways</Text>
                     </View>
                     <View style={styles.itemTopRight}>
-                        <FontAwesome5 name="bus-alt" size={48} color="#2596D0" />
+                        <FontAwesome5 name="bus-alt" size={48} color="#3B82F6" />
                     </View>
                 </View>
                 <View style={styles.itemMiddle}>
                     <View style={styles.route}>
-                        <MaterialCommunityIcons name="map-marker-path" size={24} color="#2596D0" style={styles.pathIcon} />
+                        <MaterialCommunityIcons name="map-marker-path" size={24} color="#3B82F6" style={styles.pathIcon} />
                         <Text style={styles.routeSource}>
                             Rohini
                         </Text>
-                        <MaterialIcons name="compare-arrows" size={24} color="#2596D0" style={styles.routeIcon} />
+                        <MaterialIcons name="compare-arrows" size={24} color="#3B82F6" style={styles.routeIcon} />
                         <Text style={styles.routeDest}>
                             Delhi
                         </Text>
                     </View>
                     <View style={styles.minAway}>
-                        <Entypo name="back-in-time" size={24} color="#2596D0" />
+                        <Entypo name="back-in-time" size={24} color="#3B82F6" />
                         <Text style={styles.minAwayText}>3 min away</Text>
                     </View>
                 </View>
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     },
     backBtn: {
         padding: 12,
-        backgroundColor: '#eaf8ff',
+        backgroundColor: '#dbe8ff',
         borderRadius: 50,
     },
     busList: {
@@ -248,7 +248,7 @@ const styles = StyleSheet.create({
     itemTopLeft: {},
     itemTopRight: {
         padding: 20,
-        backgroundColor: '#eaf8ff',
+        backgroundColor: '#dbe8ff',
         borderRadius: 50,
     },
     itemMiddle: {
@@ -262,7 +262,7 @@ const styles = StyleSheet.create({
         // justifyContent: 'space-between',
         paddingHorizontal: 14,
         paddingVertical: 5,
-        backgroundColor: '#eaf8ff',
+        backgroundColor: '#dbe8ff',
         borderRadius: 50,
     },
     pathIcon: {
@@ -277,14 +277,14 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         paddingVertical: 5,
         paddingHorizontal: 14,
-        backgroundColor: '#eaf8ff',
+        backgroundColor: '#dbe8ff',
         borderRadius: 50,
     },
     minAwayText: {
         paddingLeft: 10,
         fontWeight: 'bold',
         fontSize: 16,
-        color: '#2596D0',
+        color: '#3B82F6',
     },
     busName: {
         fontSize: 18,
@@ -300,12 +300,12 @@ const styles = StyleSheet.create({
         // marginRight: 10,
         fontWeight: 'bold',
         fontSize: 16,
-        color: '#2596D0',
+        color: '#3B82F6',
     },
     routeDest: {
         fontWeight: 'bold',
         fontSize: 16,
-        color: '#2596D0',
+        color: '#3B82F6',
         // marginLeft: 10,
     },
     mapBox: {
@@ -322,7 +322,7 @@ const styles = StyleSheet.create({
         borderRadius: 30,
     },
     infoTextBox: {
-        backgroundColor: '#EAEDF1',
+        backgroundColor: '#f7f7f7',
         paddingHorizontal: 14,
         paddingVertical: 10,
         // width: '40%',
@@ -332,7 +332,7 @@ const styles = StyleSheet.create({
     infoText: {
         fontSize: 14,
         fontWeight: 'bold',
-        color: '#64748B',
+        color: '#94A3B8',
     },
     boardingBtn: {
         backgroundColor: '#3B82F6',
