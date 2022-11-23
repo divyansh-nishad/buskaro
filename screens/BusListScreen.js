@@ -1,11 +1,19 @@
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React, { Component, useLayoutEffect } from 'react'
+import React, { Component, useEffect, useLayoutEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 
-const BusListScreen = () => {
+const BusListScreen = ({ lat, lon, dest }) => {
     const nav = useNavigation()
+    const [latitude, setLatitude] = useState()
+    const [longitude, setLongitude] = useState()
+
+    // useEffect(() => {
+    //     setLatitude(lat)
+    //     setLongitude(lon)
+    // }, [])
+
 
     useLayoutEffect(() => {
         nav.setOptions({
@@ -20,7 +28,7 @@ const BusListScreen = () => {
                     style={styles.backBtn}
                     onPress={() => nav.goBack()}
                 >
-                    <Ionicons name="chevron-back-outline" size={28} color="#2d179b" />
+                    <Ionicons name="chevron-back-outline" size={28} color="#2596D0" />
                 </TouchableOpacity>
             </View>
             <ScrollView style={styles.busList}>
@@ -28,7 +36,7 @@ const BusListScreen = () => {
                     style={styles.busItem}
                     onPress={() => nav.navigate('BusBoarding')}
                 >
-                    <View style={styles.busItemLeft}>
+                    <View style={styles.busItemTop}>
                         <Text style={styles.busName}>Bus 1</Text>
                         <Text style={styles.busNumber}>UP 8900</Text>
                         <View style={styles.route}>
@@ -37,7 +45,7 @@ const BusListScreen = () => {
                             <Text style={styles.routeDest}>Pokhara</Text>
                         </View>
                     </View>
-                    <View style={styles.busItemRight}>
+                    <View style={styles.busItemBottom}>
                         <View style={styles.crowdBox}>
                             <Text style={styles.crowd}>56%</Text>
                         </View>
@@ -57,6 +65,7 @@ const styles = StyleSheet.create({
         width: '100%',
         paddingHorizontal: 20,
         paddingVertical: 30,
+        backgroundColor: '#fff',
     },
     navbar: {
         flexDirection: 'row',
@@ -65,8 +74,8 @@ const styles = StyleSheet.create({
     },
     backBtn: {
         padding: 12,
-        backgroundColor: '#e1dbff',
-        borderRadius: 10,
+        backgroundColor: '#eaf8ff',
+        borderRadius: 50,
     },
     busList: {
         marginVertical: 20,

@@ -15,7 +15,10 @@ const BusInfoScreen = () => {
     return (
         <View style={styles.container}>
             <View style={styles.navbar}>
-                <TouchableOpacity style={styles.backBtn}>
+                <TouchableOpacity
+                    style={styles.backBtn}
+                    onPress={() => nav.goBack()}
+                >
                     <Ionicons name="chevron-back-outline" size={28} color="#2d179b" />
                 </TouchableOpacity>
             </View>
@@ -37,7 +40,7 @@ const BusInfoScreen = () => {
                 </View>
             </View>
             <View style={styles.mapBox}>
-                {/* <MapView style={styles.map} /> */}
+                <MapView style={styles.map} />
             </View>
             <View style={styles.infoTextBox}>
                 <Text style={styles.infoText}>
