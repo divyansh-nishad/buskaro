@@ -32,16 +32,16 @@ const Login = ({ navigation }) => {
             </View>
             <View style={styles.form}>
                 <FontAwesome5 name="user-alt" style={styles.icon} size={32} color="#94A3B8" />
-                <TextInput style={styles.input} placeholder="@username" placeholderTextColor={'#94A3B8'} onChangeText={(text) => setName(text)}></TextInput>
+                <TextInput type="text" style={styles.input} placeholder="@username" placeholderTextColor={'#94A3B8'} onChangeText={(text) => setName(text)}></TextInput>
             </View>
 
             <View style={styles.form}>
                 <MaterialCommunityIcons style={styles.icon} name="email" size={32} color="#94A3B8" />
-                <TextInput style={styles.input} placeholder="email@example.com" placeholderTextColor={'#94A3B8'} onChangeText={(text) => setEmail(text)}></TextInput>
+                <TextInput type="email" style={styles.input} placeholder="email@example.com" placeholderTextColor={'#94A3B8'} onChangeText={(text) => setEmail(text)}></TextInput>
             </View>
             <View style={styles.form}>
                 <FontAwesome5 name="key" style={styles.icon} size={32} color="#94A3B8" />
-                <TextInput style={styles.input} placeholder="passowrd" placeholderTextColor={'#94A3B8'} onChangeText={(text) => setPassword(text)}></TextInput>
+                <TextInput type="password" style={styles.input} placeholder="password" placeholderTextColor={'#94A3B8'} onChangeText={(text) => setPassword(text)}></TextInput>
             </View>
             <TouchableOpacity style={styles.button} onPress={pressLogin}>
                 <Text style={styles.buttonText}>Sign Up</Text>

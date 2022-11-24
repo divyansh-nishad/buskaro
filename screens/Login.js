@@ -33,6 +33,7 @@ const Login = ({ navigation }) => {
             <View style={styles.form}>
                 <MaterialCommunityIcons style={styles.icon} name="email" size={32} color="#94A3B8" />
                 <TextInput
+                    type="email"
                     style={styles.input}
                     placeholder="email@example.com"
                     placeholderTextColor={'#94A3B8'}
@@ -45,6 +46,7 @@ const Login = ({ navigation }) => {
                 <FontAwesome5 name="key" style={styles.icon} size={32} color="#94A3B8" />
                 <TextInput
                     style={styles.input}
+                    type="password"
                     placeholder="password"
                     placeholderTextColor={'#94A3B8'}
                     onChangeText={(text) => setPassword(text)}
