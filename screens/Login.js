@@ -10,6 +10,7 @@ import {
 import React, { useState } from 'react';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { ScrollView } from 'moti';
 
 const Login = ({ navigation }) => {
     const [email, setEmail] = useState('');
@@ -21,7 +22,7 @@ const Login = ({ navigation }) => {
         navigation.navigate('Home')
     }
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <Image
                 style={styles.tinyLogo}
                 source={require('../assets/images/login.png')}
@@ -66,7 +67,7 @@ const Login = ({ navigation }) => {
                 </TouchableOpacity>
             </View>
             <StatusBar style="auto" />
-        </View>
+        </ScrollView>
     );
 };
 
@@ -133,7 +134,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         height: 400,
         width: 400,
-        marginTop: 60,
+        marginTop: 20,
     },
     button: {
         backgroundColor: '#3B82F6',
