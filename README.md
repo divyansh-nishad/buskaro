@@ -2,7 +2,7 @@
 
 `Why wait for bus when you can BusKaro`
 
-## Author
+## Authors
 
 - [@ayush](https://github.com/ayush23719)
 - [@divyansh](https://github.com/divyansh-nishad)
