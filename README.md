@@ -1,6 +1,6 @@
 # BusKaro
 
-`Why wait for bus when you can buskaro`
+`Why wait for bus when you can BusKaro`
 
 ## Author
 
