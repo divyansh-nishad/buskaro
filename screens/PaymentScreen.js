@@ -1,4 +1,4 @@
-import { StyleSheet, Text, Touchable, TouchableOpacity, View } from 'react-native'
+import { StatusBar, StyleSheet, Text, Touchable, TouchableOpacity, View } from 'react-native'
 import React, { Component, useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 // import Animated, {
