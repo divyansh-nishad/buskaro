@@ -315,7 +315,7 @@ const styles = StyleSheet.create({
         // marginLeft: 10,
     },
     mapBox: {
-        height: '54%',
+        height: '50%',
         width: '100%',
         // marginTop: 20,
         // marginBottom: 20,

@@ -5,7 +5,7 @@ import {
     Image,
     StatusBar,
     TextInput,
-    TouchableOpacity, Alert
+    TouchableOpacity, Alert, ScrollView
 } from 'react-native';
 import React, { useState } from 'react';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -22,7 +22,7 @@ const Login = ({ navigation }) => {
         navigation.navigate('Home')
     }
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <Image
                 style={styles.tinyLogo}
                 source={require('../assets/images/register.png')}
@@ -47,7 +47,7 @@ const Login = ({ navigation }) => {
                 <Text style={styles.buttonText}>Sign Up</Text>
             </TouchableOpacity>
             <StatusBar style="auto" />
-        </View>
+        </ScrollView>
     );
 };
 
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         height: 400,
         width: 400,
-        marginTop: 60,
+        marginTop: 20,
     },
     button: {
         backgroundColor: '#3B82F6',
