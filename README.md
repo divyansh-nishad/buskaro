@@ -2,6 +2,13 @@
 
 `Why wait for bus when you can BusKaro`
 
+![Workflow](./assets/images/workflow.png?raw=true "Workflow")
+
+- The main goal of our project is to provide local bus services to passengers, so that they can travel with ease.
+- We built an app which tracks the location, route, timing and seat occupancy of a local bus so as to reduce waiting time on bus stops.
+- It has features like 'shake' which dials emergency call lines when the device is shaken in case of any theft, assault etc.
+- We'll also be providing online payment option to avoid change problem in the bus.
+
 ## Resources Used
 
 - [React Native](https://reactnative.dev/)
