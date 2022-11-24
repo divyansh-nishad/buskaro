@@ -6,6 +6,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import * as Location from 'expo-location';
 import { MaterialIcons } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 // import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete"
 
 const HomeScreen = () => {
@@ -66,10 +67,11 @@ const HomeScreen = () => {
         <View style={styles.container}>
             <View style={styles.navbar}>
                 <TouchableOpacity style={styles.userInfo}>
-                    <Image source={require('../assets/images/user.jpg')}
-                        style={styles.userPhoto} />
+                    {/* <Image source={require('../assets/images/user.jpg')}
+                        style={styles.userPhoto} /> */}
+                    <Feather name="user" size={32} color="#94A3B8" />
                     <Text style={styles.userName}>
-                        @username
+                        @prajesh
                     </Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.settings}>

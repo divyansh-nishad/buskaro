@@ -23,6 +23,12 @@
 - [OpenCV](https://opencv.org/)
 - [Crowd Detection Module](https://github.com/prajeshElEvEn/buskaro-crowd-module) was used to display seat occupancy in the bus.
 
+## Screenshots
+
+Checkout our app.
+
+![Presets](./assets/images/preset.png?raw=true "Presets")
+
 ## Pre-requisites
 
 - To set-up `expo-cli` on your computer, checkout [these docs](https://docs.expo.dev/).
